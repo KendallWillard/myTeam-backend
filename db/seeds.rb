@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 kendall = User.create(first_name: "Kendall", last_name: 'Willard', phone: '4172945180');
-Team.create(name: 'Kansas City Chiefs', city: 'Kansas City', description: "Best team aliveee", user_id: kendall);
+Team.create(name: 'Kansas City Chiefs', city: 'Kansas City', description: "Best team aliveee", user_id: 1);
+Team.create(name: 'Denver Nuggets', city: 'Denver', description: "Nug City", user_id: 1);
