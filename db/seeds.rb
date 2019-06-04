@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+kendall = User.create(first_name: "Kendall", last_name: 'Willard', phone: '4172945180');
+Team.create(name: 'Kansas City Chiefs', city: 'Kansas City', description: "Best team aliveee", user_id: kendall);
