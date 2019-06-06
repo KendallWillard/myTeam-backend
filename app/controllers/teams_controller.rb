@@ -1,5 +1,6 @@
 class TeamsController < ApplicationController
-  
+  skip_before_action :authorized
+
   def index
     if params[:user_id]
       @teams = User.find(params[:user_id]).teams
@@ -9,9 +10,23 @@ class TeamsController < ApplicationController
     render json: @teams
   end
 
+  def new
+    @team = Team.new(team_params)
+  end
+  
+  def create
+    @team = Team.create(team_params)
+  end
+
   def show
     @team = Team.find(params[:id])
     render json: @team
+  end
+
+  private
+
+  def team_params
+    params.require(:team).permit(:name, :city, :description, :user_id, :id)
   end
 
 end
