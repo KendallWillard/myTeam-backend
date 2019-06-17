@@ -23,6 +23,11 @@ class TeamsController < ApplicationController
     render json: @team
   end
 
+  def destory 
+    @team = Team.find(params[:id])
+    @team.destroy
+  end
+
   private
 
   def team_params
