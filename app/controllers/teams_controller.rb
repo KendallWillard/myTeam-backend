@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  skip_before_action :authorized
+  
 
   def index
     if params[:user_id]
@@ -23,7 +23,7 @@ class TeamsController < ApplicationController
     render json: @team
   end
 
-  def destory 
+  def destroy
     @team = Team.find(params[:id])
     @team.destroy
   end

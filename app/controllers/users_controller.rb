@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       render json: { error: @user.errors }, status: :not_acceptable
     end
   end
+
  
   private
  
