@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  
+  skip_before_action :authorized
 
   def index
     if params[:user_id]
